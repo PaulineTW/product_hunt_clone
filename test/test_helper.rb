@@ -1,6 +1,11 @@
 ENV['RAILS_ENV'] ||= 'test'
 require_relative '../config/environment'
 require 'rails/test_help'
+# require 'capybara/rails'
+# require 'capybara/rspec'
+# require 'capybara-screenshot/rspec'
+# require 'selenium-webdriver'
+require 'webdrivers/chromedriver'
 
 class ActiveSupport::TestCase
   # Run tests in parallel with specified workers
@@ -21,5 +26,3 @@ end
   end
   Capybara.save_path = Rails.root.join('tmp/capybara')
   Capybara.javascript_driver = :headless_chrome
-
-end
